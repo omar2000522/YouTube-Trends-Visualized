@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SVG Visualizations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1 id="t1">YouTube</h1> <h1 id="t2">Visualized</h1>
+    </div>
+    <div class="menu">
+        <p>Click on the buttons below to see the visualizations.</p>
+        <button onclick="toggleSVG(1)">Likes vs Dislikes</button>
+        <button onclick="toggleSVG(2)">Total Views, Comments, Likes</button>
+        <button onclick="toggleSVG(3)">Categories</button>
+        <button onclick="toggleSVG(4)">Regions</button>
+        <button onclick="toggleSVG(5)">Comments</button>
+    </div>
+    <div class="svg-container">
+        <div id="vis1" class="visualization">
+            <div class="tx">
+                YouTube is the biggest video sharing platform in the world.
+                It has over 2 billion users and over 500 hours of video are uploaded every minute.
+                My goal is to visualize some of the data from the YouTube trending videos dataset.
+                This dataset contains information about the top trending 200 videos on YouTube every day.
+                The data is collected from 2017-11-14 to 2018-06-14.
+                <br><br>
+                Here we have a scatter plot but it is a bit off. 
+                It shows the number of likes on the X-axis and dislikes on the Y-axis for each video.
+                The color of the circle represents if the like ratio is positive or not (likes > dislikes).
+                The lines connect the datapoints of the videos that appear in the trending page multiple times.
+                Hovering over a datapoint shows information about the video, including the thumbnail!
+                <br><br>
+                You can see at the top there are 2-3 prominent lines sloping upwards in the scatter plot. 
+                These represent controversial videos that garnered many likes but also many dislikes.
+                One of the videos turned from green to red, indicating that it was trending for a negative reason.
+                Hover over it to see what it is!
+                <br><br>
+            </div>
+        </div>
+        <div id="vis2" class="visualization">
+            <div class="tx">
+                This is a line graph that simply shows us the growth of the YouTube trending videos over time.
+                You can see that the number of views/likes/comments is gradually increasing over time and taking off after March of 2018.
+                <br><br>
+                You can click the radio buttons below to see the growth of the different metrics:
+                <br><br>
+            </div>
+
+            <div class="radio">
+                <input type="radio" id="views" name="data" value="views" checked>
+                <label for="views">Views</label>
+
+                <input type="radio" id="likes" name="data" value="likes">
+                <label for="likes">Likes</label>
+
+                <input type="radio" id="comments" name="data" value="comments">
+                <label for="comments">Comments</label>
+            </div>
+        </div>
+        <div id="vis3" class="visualization">
+            <div class="tx">
+                This is a stacked streamgraph that shows the distribution of the trending videos by category.
+                The categories are sorted by the number of historical total views.
+                <br><br>
+                This visualization makes it easy to see that 
+                a huge majority of the trending videos views are from the Music category.
+                The Entertainment category is the second most popular. 
+                An interesting note is that the Music category 
+                videos became disproportionately more popular over time compared to other categories.
+                <br><br>
+            </div>
+        </div>
+        <div id="vis4" class="visualization">
+            <div class="tx">
+                This is a map of the world that shows the average views of a trending video by region.
+                The regions are the ones available in the dataset.
+                <br><br>
+                interestingly, the regions with the highest average views are not the most populated regions.
+                The highest average views are in Great Britain despite the fact that its population is 1/6th the size of the United States.
+                My guess is that trending videos in Great Britain are more popular than trending videos in the United States.
+                Not necessarily meaning UK videos are more popular, but that the UK trending page is more popular.
+                <br><br>
+            </div>
+        </div>
+        <div id="vis5" class="visualization">
+            <div class="tx">
+                This is a boxplot that shows the distribution of the number of comments on trending videos by category.
+                Here we find another interesting finding. 
+                Despite the fact that the Gaming category is not in the top 5 most viewed categories, 
+                the Gaming category has the most median comments.
+                <br><br>
+                This could be because the Gaming category is more interactive than other categories.
+                It could also be because the Gaming category is more popular with younger audiences,
+                who tend to comment more than older audiences.
+                <br><br>
+            </div>
+        </div>
+        <div id="vis6" class="visualization">
+            <h1>Marks and Channels</h1>
+            <div class="tx">
+                <h2>1. Scatter Plot</h2>
+                <b>Marks</b>: Points, lines<br>
+                <b>Channels</b>: Position, color<br>
+                <b>Choice of color</b>: Green for positive like ratio (likes > dislikes), red for negative like ratio (dislikes > likes)
+                <br><br>
+                <h2>2. Line Graph</h2>
+                <b>Marks</b>: Lines<br>
+                <b>Channels</b>: Position<br>
+                <b>Choice of color</b>: Black and white for best contrast 😎
+                <br><br>
+                <h2>3. Streamgraph</h2>
+                <b>Marks</b>: Area<br>
+                <b>Channels</b>: Position, color<br>
+                <b>Choice of color</b>: I used the d3 color scheme due to the high number of categories
+                <br><br>
+                <h2>4. Map</h2>
+                <b>Marks</b>: Area<br>
+                <b>Channels</b>: color<br>
+                <b>Choice of color</b>: Green because it is the natural color of earth and it is beautiful
+                <br><br>
+                <h2>5. Boxplot</h2>
+                <b>Marks</b>: Rectangles, lines<br>
+                <b>Channels</b>: Position, size<br>
+                <b>Choice of color</b>: I chose blue because it is easy to see and red to make the median mark stand out.
+                <br><br>
+            </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

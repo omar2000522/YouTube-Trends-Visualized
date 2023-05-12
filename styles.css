@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.header {
+    background-color: #282828;
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* position: absolute; */
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 40px;
+    padding: 10px;
+    display: inline-block;
+}
+
+#t1 {
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+}
+
+#t2 {
+    padding-left: 0;
+    color: white;
+}
+
+.menu {
+    /* background-color: #282828; */
+    margin: 0;
+    padding-top: 50px;
+
+}
+
+.menu p {
+    /* display: inline-block; */
+    padding: 10px;
+    margin: 0;
+    /* color: white; */
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.tx {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 20px;
+    text-align: justify;
+    /* margin-right: 25%; */
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: #282828;
+}
+
+button:hover {
+    background-color: #8e8e8e;
+}
+
+svg {
+    background-color: white;
+}
+
+.svg-container {
+    /* position: relative; */
+    width: 100%;
+    height: 500px;
+    /* max-width: 800px; */
+    margin: 5px;
+}
+
+.visualization {
+    /* center */
+
+    /* display: inline-block; */
+
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#vis1 {
+    /* background-color: blue; */
+    width: 100%;
+    height: 1000px;
+}
+
+#vis2 {
+    /* background-color: red; */
+    /* text-align: center;     */
+}
+
+#vis3 {
+    /* background-color: green; */
+}
+
+#vis4 {
+    /* background-color: yellow; */
+}
+
+#vis5 {
+    /* background-color: purple; */
+}
+
+/* modify radio */
+label {
+    /* display: inline-block; */
+    /* margin: 0 10px; */
+    cursor: pointer;
+    font-size: 20px;
+    /* padding: 10px; */
+    
+
+}
+
+.radio {
+    
+    /* margin: 10px; */
+    padding: 10px;
+}
